@@ -25,7 +25,7 @@ class 加(函数):
         return
 
     def __str__(self):
-        y = self.值()
+        y = self.get()
         if(y != 未知数):
             return str(y)
         s = '({}) + ({})'.format(self.x[0], self.x[1])
