@@ -24,12 +24,12 @@ class 正弦(函数):
         return
 
     def get(self):
-        y = self.x[0].get()
         try:
+            y = self.x[0].get()
             return math.sin(y)
         except Exception as e:
             pass
-        s = 'sin({})'.format(y)
+        s = 'sin({})'.format(self.x[0])
         return s
 
 

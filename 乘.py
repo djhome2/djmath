@@ -1,52 +1,40 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
-from LogApi import log
+
+
+from 函数 import 函数
 from 变量 import 变量
-import uuid
-import math
-import sys
 from 实数 import 实数
 
 
-class 乘():
-    args = None
+class 乘(函数):
 
-    def __init__(self, *args):
-        log.info('Sin  __init__ --- ')
-        self.args = args
+    def __init__(self, 变量1, 变量2):
+        v1 = 变量1
+        if(not isinstance(v1, 变量)):
+            v1 = 变量(x=变量1)
+        v2 = 变量2
+        if(not isinstance(v2, 变量)):
+            v2 = 变量(x=变量2)
+        函数.__init__(self, '乘', v1, v2)
+        return
 
     def get(self):
-        log.info('get value=%s', self.args)
-        return self.args
-
-    def __str__(self):
-        v = self.值()
-        if(v != None):
-            return str(v)
-        x = self.args[0]
-        y = self.args[1]
-        s = '({})*({})'.format(x, y)
-        return s
-
-    def 值(self):
+        y1 = self.x[0].get()
+        y2 = self.x[1].get()
         try:
-            x = self.args[0]
-            y = self.args[1]
-            a = 实数(x)
-            if(a == None):
-                return None
-            b = 实数(y)
-            if(b == None):
-                return None
-            return a.值() * b.值()
+            return y1 * y2
         except Exception as e:
             pass
-        return None
+        s = '({}) * ({})'.format(y1, y2)
+        return s
 
 
 if __name__ == "__main__":
     # execute only if run as a script
-    x = 乘('1', '2')
+    x = 乘(实数(x=2), 实数(x=1))
     print(x)
     x = 乘('a', 'b')
+    print(x)
+    x = 乘('a', 实数(x=1))
     print(x)
