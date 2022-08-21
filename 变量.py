@@ -5,7 +5,7 @@ from LogApi import log
 
 
 class 变量():
-    x = None
+    # x = None
 
     def __init__(self, x=None):
         log.info('variable  __init__ --- ')
