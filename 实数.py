@@ -8,27 +8,23 @@ from 未知数 import 未知数
 
 class 实数(变量):
 
-    def __init__(self, x=未知数, name=None):
+    def __init__(self, name=None, x=未知数):
         log.info('variable  __init__ --- ')
-        变量.__init__(self, x, name)
+        变量.__init__(self, name, x)
         return
 
-    def 值(self):
+    def get(self):
+        y = 变量.get(self)
         try:
-            y = self.x.get()
             return float(y)
         except Exception as e:
             pass
-        try:
-            return float(self.x)
-        except Exception as e:
-            pass
-        return 未知数
+        return y
 
 
 if __name__ == "__main__":
     # execute only if run as a script
     v = 实数(x=1)
-    print(v.get())
+    print(v)
     v.set('a')
-    print(v.get())
+    print(v)

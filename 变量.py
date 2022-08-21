@@ -9,7 +9,7 @@ from 未知数 import 未知数
 
 class 变量():
 
-    def __init__(self, x=未知数, name=None):
+    def __init__(self, name=None, x=未知数):
         log.info('variable  __init__ --- ')
         if(name == None):
             name = str(uuid.uuid1())
@@ -18,26 +18,22 @@ class 变量():
         self.name = name
         self.x = x
         print('变量: {} = {}'.format(name, x))
+        return
 
     def set(self, x=未知数):
         log.info('set value=%s', x)
         self.x = x
-
-    def get(self):
-        log.info('get x=%s', self.x)
-        if(self.x == 未知数):
-            self.x = self.值()
-        return self.x
+        return
 
     def __str__(self):
         return str(self.get())
 
-    def 值(self):
+    def get(self):
         try:
             return self.x.get()
         except Exception as e:
             pass
-        return 未知数
+        return self.x
 
 
 if __name__ == "__main__":
