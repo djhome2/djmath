@@ -8,9 +8,9 @@ from 未知数 import 未知数
 
 class 实数(变量):
 
-    def __init__(self, name=None, x=未知数):
+    def __init__(self, x=未知数, name=None):
         log.info('variable  __init__ --- ')
-        变量.__init__(self, name, x)
+        变量.__init__(self, name=name, x=x)
         return
 
     def get(self):
