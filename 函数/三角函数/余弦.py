@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+
+import __init__
 import math
 from LogApi import log
 from 函数 import 函数

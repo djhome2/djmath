@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+
+
+import __init__
+
+
 from LogApi import log
 
 

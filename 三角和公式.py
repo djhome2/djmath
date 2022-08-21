@@ -10,8 +10,8 @@ from 二角和差公式 import 二角和差公式
 from 公式 import 公式
 from 变量 import 变量
 from 和 import 和
-from 正弦 import 正弦
-from 余弦 import 余弦
+from 函数.三角函数.正弦 import 正弦
+from 函数.三角函数.余弦 import 余弦
 
 from 加 import 加
 from 减 import 减
