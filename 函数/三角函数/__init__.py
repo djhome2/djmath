@@ -4,8 +4,13 @@
 
 import sys
 import os
-cur_path = os.path.dirname(__file__)
-sys.path.append(cur_path)
 
-root_path = os.path.abspath(os.path.join(cur_path, '../..'))
-sys.path.append(root_path)
+
+path_0 = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(path_0)
+
+path_1 = os.path.abspath(os.path.join(path_0, '..'))
+sys.path.append(path_1)
+
+path_2 = os.path.abspath(os.path.join(path_1, '..'))
+sys.path.append(path_2)
