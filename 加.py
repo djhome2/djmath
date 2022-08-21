@@ -33,8 +33,8 @@ class 加(函数):
 
     def 值(self):
         try:
-            y1 = self.x[0].值()
-            y2 = self.x[1].值()
+            y1 = self.x[0].get()
+            y2 = self.x[1].get()
             if(y1 != 未知数 and y2 != 未知数):
                 return y1 + y2
         except Exception as e:
@@ -44,9 +44,9 @@ class 加(函数):
 
 if __name__ == "__main__":
     # execute only if run as a script
-    x = 加(2, 1)
+    x = 加(实数(2), 实数(1))
     print(x)
     x = 加('a', 'b')
     print(x)
-    x = 加('a', 1)
+    x = 加('a', 实数(1))
     print(x)

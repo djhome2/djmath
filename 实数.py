@@ -3,29 +3,19 @@
 import math
 from LogApi import log
 from 变量 import 变量
+from 未知数 import 未知数
 
 
-class 实数():
-    x = None
+class 实数(变量):
 
-    def __init__(self, x=None):
+    def __init__(self, x=未知数, name=None):
         log.info('variable  __init__ --- ')
-        self.set(x)
-
-    def set(self, x):
-        log.info('set value=%s', x)
-        self.x = x
-
-    def get(self):
-        log.info('get value=%s', self.x)
-        return self.x
-
-    def __str__(self):
-        return str(self.x)
+        变量.__init__(self, x, name)
+        return
 
     def 值(self):
         try:
-            y = self.x.值()
+            y = self.x.get()
             return float(y)
         except Exception as e:
             pass
@@ -33,10 +23,12 @@ class 实数():
             return float(self.x)
         except Exception as e:
             pass
-        return None
+        return 未知数
 
 
 if __name__ == "__main__":
     # execute only if run as a script
-    v = 实数(1)
+    v = 实数(x=1)
+    print(v.get())
     v.set('a')
+    print(v.get())

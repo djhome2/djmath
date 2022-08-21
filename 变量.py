@@ -8,13 +8,14 @@ from 未知数 import 未知数
 
 
 class 变量():
-    # x = None
 
-    def __init__(self, name=None, x=未知数):
+    def __init__(self, x=未知数, name=None):
         log.info('variable  __init__ --- ')
         if(name == None):
-            name = uuid.uuid1()
-        self.name = str(name)
+            name = str(uuid.uuid1())
+        else:
+            assert(isinstance(name, str))
+        self.name = name
         self.x = x
         print('变量: {} = {}'.format(name, x))
 
@@ -33,7 +34,7 @@ class 变量():
 
     def 值(self):
         try:
-            return self.x.值()
+            return self.x.get()
         except Exception as e:
             pass
         return 未知数
@@ -41,7 +42,7 @@ class 变量():
 
 if __name__ == "__main__":
     # execute only if run as a script
-    x = 变量('x')
+    x = 变量(name='x')
     print(x)
-    x = 变量('y', 1)
+    x = 变量(name='y', x=1)
     print(x)
