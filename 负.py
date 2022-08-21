@@ -27,6 +27,9 @@ class 负(函数):
         s = '-({})'.format(y1)
         return s
 
+    def 负值(self):
+        return self.x[0]
+
 
 if __name__ == "__main__":
     # execute only if run as a script
