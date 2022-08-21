@@ -2,43 +2,41 @@
 # -*- coding: UTF-8 -*-
 from LogApi import log
 
-import uuid
+
 import math
-import sys
+from 函数 import 函数
 
 from 变量 import 变量
 from 实数 import 实数
+from 未知数 import 未知数
 
 
-class 正弦():
-    x = None
+class 正弦(函数):
 
-    def __init__(self, x=None):
+    def __init__(self, x):
         log.info('Sin  __init__ --- ')
-        self.set(x)
+        函数.__init__(self, x)
+        return
 
     def set(self, x):
         log.info('set argv=%s', x)
-        self.x = x
-
-    def get(self):
-        log.info('get value=%s', self.x)
-        return self.x
+        函数.set(self, x)
+        return
 
     def __str__(self):
-        y = self.值()
-        if(y != None):
+        y = self.get()
+        if(y != 未知数):
             return str(y)
-        s = 'sin({})'.format(self.x)
+        s = 'sin({})'.format(self.x[0])
         return s
 
     def 值(self):
-        y = 实数(self.x)
         try:
-            return math.sin(y.值())
+            y = self.x[0].get()
+            return math.sin(y)
         except Exception as e:
             pass
-        return None
+        return 未知数
 
 
 if __name__ == "__main__":
@@ -47,5 +45,8 @@ if __name__ == "__main__":
     y = 正弦(x)
     print(y)
     x = 变量('x')
+    y = 正弦(x)
+    print(y)
+    x = 实数(1)
     y = 正弦(x)
     print(y)
