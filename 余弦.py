@@ -21,12 +21,16 @@ class 余弦(函数):
         return
 
     def get(self):
+        x = self.x[0]
         try:
-            y = self.x[0].get()
-            return math.cos(y)
+            return math.cos(x.get())
         except Exception as e:
             pass
-        s = 'cos({})'.format(self.x[0])
+        try:
+            return math.cos(x)
+        except Exception as e:
+            pass
+        s = 'cos({})'.format(x)
         return s
 
 

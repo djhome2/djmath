@@ -32,8 +32,9 @@ class 加(函数):
                 return y1 + y2
             except Exception as e:
                 pass
-        s = '({}) + ({})'.format(y1, y2)
-        return s
+        if(isinstance(y1, float)):
+            return '{} + ({})'.format(y1, y2)
+        return '({}) + {}'.format(y1, y2)
 
 
 if __name__ == "__main__":
