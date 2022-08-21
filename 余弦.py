@@ -12,28 +12,22 @@ class 余弦(函数):
 
     def __init__(self, x):
         log.info('Sin  __init__ --- ')
-        函数.__init__(self, x)
+        函数.__init__(self, '余弦', x)
         return
 
     def set(self, x):
         log.info('set argv=%s', x)
-        函数.set(self, x)
+        函数.set(self, '余弦', x)
         return
 
-    def __str__(self):
-        y = self.get()
-        if(y != 未知数):
-            return str(y)
-        s = 'cos({})'.format(self.x[0])
-        return s
-
-    def 值(self):
+    def get(self):
+        y = self.x[0].get()
         try:
-            y = self.x[0].get()
             return math.cos(y)
         except Exception as e:
             pass
-        return 未知数
+        s = 'cos({})'.format(y)
+        return s
 
 
 if __name__ == "__main__":
