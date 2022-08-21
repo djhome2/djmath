@@ -27,7 +27,9 @@ class 除(函数):
             pass
         if(isinstance(y1, float)):
             return '{} / ({})'.format(y1, y2)
-        return '({}) / {}'.format(y1, y2)
+        if(isinstance(y2, float)):
+            return '({}) / {}'.format(y1, y2)
+        return '({}) / ({})'.format(y1, y2)
 
 
 if __name__ == "__main__":
