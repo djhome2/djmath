@@ -26,10 +26,10 @@ class 乘(函数):
             return y1 * y2
         except Exception as e:
             pass
-        if(isinstance(y1, float)):
-            return '{} * ({})'.format(y1, y2)
-        if(isinstance(y2, float)):
-            return '({}) * {}'.format(y1, y2)
+        # if(isinstance(y1, float)):
+        #     return '{} * ({})'.format(y1, y2)
+        # if(isinstance(y2, float)):
+        #     return '({}) * {}'.format(y1, y2)
         return '({}) * ({})'.format(y1, y2)
 
 

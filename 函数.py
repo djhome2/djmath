@@ -49,6 +49,9 @@ class 函数():
             pass
         return None
 
+    def is_number(self, x):
+        return isinstance(x, float) or isinstance(x, int) or isinstance(x, complex)
+
 
 if __name__ == "__main__":
     # execute only if run as a script

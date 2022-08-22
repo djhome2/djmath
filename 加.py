@@ -27,17 +27,17 @@ class 加(函数):
     def get(self):
         y1 = self.x[0].get()
         y2 = self.x[1].get()
-        if(isinstance(y1, float) and isinstance(y2, float)):
+        if(self.is_number(y1) and self.is_number(y2)):
             try:
                 return y1 + y2
             except Exception as e:
                 pass
-        if(isinstance(y1, float)):
-            return '{} + ({})'.format(y1, y2)
-        if(isinstance(y2, float)):
-            if(y2 < 0):
-                return '({}) - {}'.format(y1, -y2)
-            return '({}) + {}'.format(y1, y2)
+        # if(self.is_number(y1)):
+        #     return '{} + ({})'.format(y1, y2)
+        # if(self.is_number(y2)):
+        #     # if(y2 < 0):
+        #     #     return '({}) - {}'.format(y1, -y2)
+        #     return '({}) + {}'.format(y1, y2)
         return '({}) + ({})'.format(y1, y2)
 
 
