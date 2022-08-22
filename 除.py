@@ -18,18 +18,14 @@ class 除(函数):
         函数.__init__(self, v1, v2)
         return
 
-    def get(self):
-        y1 = self.x[0].get()
-        y2 = self.x[1].get()
-        try:
-            return y1 / y2
-        except Exception as e:
-            pass
-        # if(isinstance(y1, float)):
-        #     return '{} / ({})'.format(y1, y2)
-        # if(isinstance(y2, float)):
-        #     return '({}) / {}'.format(y1, y2)
-        return '({}) / ({})'.format(y1, y2)
+    def get_default_value(self):
+        y1 = self.get_x(self.x[0])
+        y2 = self.get_x(self.x[1])
+        return y1 / y2
+
+    def get_default_str(self):
+        s = '({}) / ({})'.format(self.x[0], self.x[1])
+        return s
 
 
 if __name__ == "__main__":

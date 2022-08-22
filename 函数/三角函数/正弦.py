@@ -28,20 +28,12 @@ class 正弦(函数):
         函数.set(self, x)
         return
 
-    def get(self):
-        x = self.x[0]
-        try:
-            return math.sin(x.get())
-        except Exception as e:
-            pass
-        try:
-            return math.sin(x)
-        except Exception as e:
-            pass
-        v1 = self.get_expand()
-        if(v1 != None):
-            return v1
-        s = 'sin({})'.format(x)
+    def get_default_value(self):
+        y1 = self.get_x(self.x[0])
+        return math.sin(y1)
+
+    def get_default_str(self):
+        s = 'sin({})'.format(self.x[0])
         return s
 
 

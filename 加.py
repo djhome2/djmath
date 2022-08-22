@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
+
+
 from LogApi import log
 from 函数 import 函数
 from 变量 import 变量
-import uuid
-import math
-import sys
+
 
 from 实数 import 实数
-from 未知数 import 未知数
 
 
 class 加(函数):
@@ -24,21 +23,22 @@ class 加(函数):
         函数.__init__(self, v1, v2)
         return
 
-    def get(self):
-        y1 = self.x[0].get()
-        y2 = self.x[1].get()
+    def get_default_value(self):
+        y1 = self.get_x(self.x[0])
+        y2 = self.get_x(self.x[1])
         if(self.is_number(y1) and self.is_number(y2)):
-            try:
-                return y1 + y2
-            except Exception as e:
-                pass
+            return y1 + y2
         # if(self.is_number(y1)):
         #     return '{} + ({})'.format(y1, y2)
         # if(self.is_number(y2)):
         #     # if(y2 < 0):
         #     #     return '({}) - {}'.format(y1, -y2)
         #     return '({}) + {}'.format(y1, y2)
-        return '({}) + ({})'.format(y1, y2)
+        return self
+
+    def get_default_str(self):
+        s = '({}) + ({})'.format(self.x[0], self.x[1])
+        return s
 
 
 if __name__ == "__main__":
