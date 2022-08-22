@@ -16,7 +16,7 @@ from 实数 import 实数
 class 正弦__加(函数):
 
     def __init__(self, 参数1, 参数2):
-        函数.__init__(self, '正弦__加', 参数1, 参数2)
+        函数.__init__(self, 参数1, 参数2)
         return
 
     def get(self):

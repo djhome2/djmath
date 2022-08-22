@@ -15,17 +15,27 @@ class 负(函数):
         v1 = 变量1
         if(not isinstance(v1, 变量)):
             v1 = 变量(x=变量1)
-        函数.__init__(self, '负', v1)
+        函数.__init__(self, v1)
         return
 
     def get(self):
-        y1 = self.x[0].get()
         try:
+            y1 = self.x[0].get()
             return -y1
         except Exception as e:
             pass
-        s = '-({})'.format(y1)
-        return s
+        try:
+            y1 = self.x[0]
+            return -y1
+        except Exception as e:
+            pass
+        return self
+
+    def __str__(self):
+        y = self.get()
+        if(y == self):
+            return '-({})'.format(self.x[0])
+        return str(y)
 
     def 负值(self):
         return self.x[0]

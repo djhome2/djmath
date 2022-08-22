@@ -21,7 +21,7 @@ class 加(函数):
         v2 = 变量2
         if(not isinstance(v2, 变量)):
             v2 = 变量(x=变量2)
-        函数.__init__(self, '加', v1, v2)
+        函数.__init__(self, v1, v2)
         return
 
     def get(self):

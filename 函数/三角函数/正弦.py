@@ -20,12 +20,12 @@ class 正弦(函数):
 
     def __init__(self, x):
         log.info('Sin  __init__ --- ')
-        函数.__init__(self, '正弦', x)
+        函数.__init__(self, x)
         return
 
     def set(self, x):
         log.info('set argv=%s', x)
-        函数.set(self,  '正弦', x)
+        函数.set(self, x)
         return
 
     def get(self):
@@ -38,6 +38,9 @@ class 正弦(函数):
             return math.sin(x)
         except Exception as e:
             pass
+        v1 = self.get_expand()
+        if(v1 != None):
+            return v1
         s = 'sin({})'.format(x)
         return s
 

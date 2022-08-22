@@ -17,7 +17,7 @@ from 负 import 负
 class 正弦__负(函数):
 
     def __init__(self, 参数1):
-        函数.__init__(self, '正弦__负', 参数1)
+        函数.__init__(self, 参数1)
         assert(isinstance(参数1, 负))
         return
 

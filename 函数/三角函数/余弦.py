@@ -14,12 +14,12 @@ class 余弦(函数):
 
     def __init__(self, x):
         log.info('Sin  __init__ --- ')
-        函数.__init__(self, '余弦', x)
+        函数.__init__(self, x)
         return
 
     def set(self, x):
         log.info('set argv=%s', x)
-        函数.set(self, '余弦', x)
+        函数.set(self, x)
         return
 
     def get(self):

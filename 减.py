@@ -16,7 +16,6 @@ class 减(加):
     def __init__(self,  变量1, 变量2):
         log.info('Sin  __init__ --- ')
         加.__init__(self, 变量1, 负(变量2))
-        self.name = '减'
         return
 
 
