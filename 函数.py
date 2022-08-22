@@ -71,6 +71,18 @@ class 函数():
         except Exception as e:
             return x
 
+    def get_x0(self):
+        return self.get_x(self.x[0])
+
+    def get_x1(self):
+        return self.get_x(self.x[1])
+
+    def get_x2(self):
+        return self.get_x(self.x[2])
+
+    def get_x3(self):
+        return self.get_x(self.x[3])
+
 
 if __name__ == "__main__":
     # execute only if run as a script

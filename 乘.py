@@ -20,9 +20,11 @@ class 乘(函数):
         return
 
     def get_default_value(self):
-        y1 = self.get_x(self.x[0])
-        y2 = self.get_x(self.x[1])
-        return y1 * y2
+        y1 = self.get_x0()
+        y2 = self.get_x1()
+        if(self.is_number(y1) and self.is_number(y2)):
+            return y1 * y2
+        return self
 
     def get_default_str(self):
         s = '({}) * ({})'.format(self.x[0], self.x[1])

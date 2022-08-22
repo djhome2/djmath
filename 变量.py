@@ -17,7 +17,7 @@ class 变量():
             assert(isinstance(name, str))
         self.name = name
         self.x = x
-        print('变量: {} = {}'.format(name, x))
+        # print('变量: {} = {}'.format(name, x))
         return
 
     def set(self, x=未知数):
