@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # execute only if run as a script
     f = 正弦__减(变量('x'), 变量('y'))
     print(f)
-    f = 正弦__减(实数(1), 实数(2))
-    print(f)
-    f = 正弦__减(实数(1), 变量('a'))
-    print(f)
+    # f = 正弦__减(实数(1), 实数(2))
+    # print(f)
+    # f = 正弦__减(实数(1), 变量('a'))
+    # print(f)

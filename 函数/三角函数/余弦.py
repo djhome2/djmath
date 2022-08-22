@@ -32,6 +32,9 @@ class 余弦(函数):
             return math.cos(x)
         except Exception as e:
             pass
+        v1 = self.get_expand()
+        if(v1 != None):
+            return v1
         s = 'cos({})'.format(x)
         return s
 
